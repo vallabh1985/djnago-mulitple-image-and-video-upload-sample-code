@@ -1,11 +1,19 @@
 <html>
 <head>
+<style>
+.space{margin-bottom:20px;}
+</style>
 </head>
 
 <body>
-<div>Title: {{form.title}}</div>
-<br>
-<div>Desc: {{form.desc}}</div>
+<form action="" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<div class="space">Title: {{form.title}}</div>
+<div class="space">Desc: {{form.desc}}</div>
+<div class="space">Multiple Image upload: {{form.multipleimages}}</div>
+<div class="space">Multiple Video upload: {{form.multiplevideos}}</div>
+<div class="space"><input type="submit"></div>
+</form>
 </body>
 
 </html>
